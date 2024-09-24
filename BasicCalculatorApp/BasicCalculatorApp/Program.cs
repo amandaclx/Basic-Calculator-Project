@@ -57,8 +57,33 @@ class Program
                     calculation = $"{number1} * {number2} = {result}";
                     break;
                 case 4:
-                    result = number1 / number2;
-                    calculation = $"{number1} / {number2} = {result}";
+                    if(number2 != 0)
+                    {
+                        result = number1 / number2;
+                        calculation = $"{number1} / {number2} = {result}";
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nError, cannot be divided by zero. Pls try again.");
+                        
+                        Console.WriteLine("\nPlease enter first number: ");
+                        double secondtrynumber1 = GetNumberFromUser();
+
+                        Console.WriteLine("\nPlease enter second number: ");
+                        double secondtrynumber2 = GetNumberFromUser();
+
+                        if (secondtrynumber2 != 0)
+                        {
+                            result = secondtrynumber1 / secondtrynumber2;
+                            calculation = $"{secondtrynumber1} / {secondtrynumber2} = {result}";
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nError, division failed as number is divided by 0. Will be redirecting you back to select an operation.");
+                            continue;
+
+                        }
+                    }
                     break;
                 case 5:
                     result = Math.Pow(number1, number2);
