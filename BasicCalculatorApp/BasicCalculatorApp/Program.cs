@@ -16,16 +16,18 @@ class Program
         {
 
             //Display options for user to select
-            Console.WriteLine("Starting the Calculator Application");
+            Console.WriteLine("\nStarting the Calculator Application");
+            Console.WriteLine("------------------------------------");
             Console.WriteLine("Select an option:");
             Console.WriteLine("1. Addition (+) ");
             Console.WriteLine("2. Subtraction (-) ");
             Console.WriteLine("3. Multiplication (*) ");
             Console.WriteLine("4. Division (/) ");
             Console.WriteLine("5. Exponentiation (^) ");
-            Console.WriteLine("0. Exit \n");
+            Console.WriteLine("0. Exit");
+            Console.WriteLine("------------------------------------\n");
 
-            int operation = Convert.ToInt32(Console.ReadLine());
+            int operation = GetOperationSelectionFromUser();
 
             if (operation == 0)         //exit program
                 Environment.Exit(0);
@@ -73,7 +75,7 @@ class Program
 
             if (operation != 0)
             {
-                Console.WriteLine("\nResult of operation is: " + calculation);
+                Console.WriteLine("\nResult of operation is: " + calculation + "\n");
                 //add calculation to history record
             }
 
@@ -81,15 +83,31 @@ class Program
             string userResponse;
             do
             {
-                Console.WriteLine("\nPerform another calculation? (y/n)\n");
-                userResponse = Console.ReadLine();
+                Console.WriteLine("Perform another calculation? (y/n)\n");
+                userResponse = Console.ReadLine().Trim().ToLower();
 
                 if (userResponse != "y" && userResponse != "n")
-                    Console.WriteLine("\nInvalid input. Please enter either y/n.");
+                    Console.WriteLine("\nInvalid input. Please enter either y/n.\n");
 
             } while (userResponse != "y" && userResponse != "n");
 
             continueCalculation = userResponse == "y";
+        }
+
+        //show history of calculations performed
+        Console.WriteLine("Records of Calculation Hisotry");
+    }
+
+    private static int GetOperationSelectionFromUser()
+    {
+        int operation;
+        while (true)
+        {
+            string input = Console.ReadLine();
+            if (int.TryParse(input, out operation) && operation >= 0 && operation <= 5)
+                return operation;
+            else
+                Console.WriteLine("\nInvalid input, pls select a option from below(0 - 5).");
         }
     }
 }
