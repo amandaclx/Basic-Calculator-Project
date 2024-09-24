@@ -1,0 +1,15 @@
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\bin\Debug\net6.0\BasicCalculatorApp.exe
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\bin\Debug\net6.0\BasicCalculatorApp.deps.json
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\bin\Debug\net6.0\BasicCalculatorApp.runtimeconfig.json
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\bin\Debug\net6.0\BasicCalculatorApp.dll
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\bin\Debug\net6.0\BasicCalculatorApp.pdb
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.csproj.AssemblyReference.cache
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.AssemblyInfoInputs.cache
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.AssemblyInfo.cs
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.csproj.CoreCompileInputs.cache
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.dll
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\refint\BasicCalculatorApp.dll
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.pdb
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\BasicCalculatorApp.genruntimeconfig.cache
+C:\Users\amand\Documents\GitHub\Basic-Calculator-Project\BasicCalculatorApp\BasicCalculatorApp\obj\Debug\net6.0\ref\BasicCalculatorApp.dll
