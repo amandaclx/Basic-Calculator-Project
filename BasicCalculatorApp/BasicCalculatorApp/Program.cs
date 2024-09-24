@@ -33,10 +33,10 @@ class Program
                 Environment.Exit(0);
 
             Console.WriteLine("\nPlease enter first number: ");
-            double number1 = Convert.ToDouble(Console.ReadLine());
+            double number1 = GetNumberFromUser();
 
             Console.WriteLine("\nPlease enter second number: ");
-            double number2 = Convert.ToDouble(Console.ReadLine());
+            double number2 = GetNumberFromUser();
 
             double result = 0;
             string calculation = string.Empty;
@@ -95,7 +95,20 @@ class Program
         }
 
         //show history of calculations performed
-        Console.WriteLine("Records of Calculation Hisotry");
+        Console.WriteLine("\nRecords of Calculation Hisotry");
+    }
+
+    private static double GetNumberFromUser()
+    {
+        double number;
+        while (true)
+        {
+            string input = Console.ReadLine();
+            if (double.TryParse(input, out number))
+                return number;
+            else
+                Console.WriteLine("\nInvalid input, pls enter a numeric value.");
+        }
     }
 
     private static int GetOperationSelectionFromUser()
