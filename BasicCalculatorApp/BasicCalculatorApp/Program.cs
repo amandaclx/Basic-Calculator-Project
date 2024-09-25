@@ -10,6 +10,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        List<string> historyrecords = new List<string>();
         bool continueCalculation = true;    //to allow user to perform calculation iteratively
 
         while (continueCalculation)
@@ -32,10 +33,10 @@ class Program
             if (operation == 0)         //exit program
                 Environment.Exit(0);
 
-            Console.WriteLine("\nPlease enter first number: ");
+            Console.Write("\nPlease enter first number: ");
             double number1 = GetNumberFromUser();
 
-            Console.WriteLine("\nPlease enter second number: ");
+            Console.Write("\nPlease enter second number: ");
             double number2 = GetNumberFromUser();
 
             double result = 0;
@@ -66,10 +67,11 @@ class Program
                     {
                         Console.WriteLine("\nError, cannot be divided by zero. Pls try again.");
                         
-                        Console.WriteLine("\nPlease enter first number: ");
+                        //allow user to try entering 2 numbers again
+                        Console.Write("\nPlease enter first number: ");
                         double secondtrynumber1 = GetNumberFromUser();
 
-                        Console.WriteLine("\nPlease enter second number: ");
+                        Console.Write("\nPlease enter second number: ");
                         double secondtrynumber2 = GetNumberFromUser();
 
                         if (secondtrynumber2 != 0)
@@ -79,9 +81,9 @@ class Program
                         }
                         else
                         {
+                            //direct user back to select an operation if division fail
                             Console.WriteLine("\nError, division failed as number is divided by 0. Will be redirecting you back to select an operation.");
                             continue;
-
                         }
                     }
                     break;
@@ -90,29 +92,31 @@ class Program
                     calculation = $"{number1} ^ {number2} = {result}";
                     break;
                 case 0:
-                    Console.WriteLine("Exit");
+                    Console.WriteLine("Exiting the Calculator Application...");
                     continueCalculation = false; //end operation
                     break;
                 default:
                     Console.WriteLine("Invalid operation selected. Please try again.\n");
-                    break;
+                    continue;
             }
 
-            if (operation != 0)
+            if (operation != 0) //if operation selected is between 1 - 5
             {
                 Console.WriteLine("\nResult of operation is: " + calculation + "\n");
+                
                 //add calculation to history record
+                historyrecords.Add(calculation);
             }
 
-            //Allow user to perform calculation again after first calculation
+            //Allow user to perform calculation again
             string userResponse;
             do
             {
-                Console.WriteLine("Perform another calculation? (y/n)\n");
+                Console.WriteLine("Perform another calculation? (y/n)");
                 userResponse = Console.ReadLine().Trim().ToLower();
 
                 if (userResponse != "y" && userResponse != "n")
-                    Console.WriteLine("\nInvalid input. Please enter either y/n.\n");
+                    Console.WriteLine("\nInvalid input. Please enter either (y/n).");
 
             } while (userResponse != "y" && userResponse != "n");
 
@@ -121,6 +125,10 @@ class Program
 
         //show history of calculations performed
         Console.WriteLine("\nRecords of Calculation Hisotry");
+        foreach (var value in historyrecords)
+        {
+            Console.WriteLine(value);
+        }
     }
 
     private static double GetNumberFromUser()
@@ -145,7 +153,7 @@ class Program
             if (int.TryParse(input, out operation) && operation >= 0 && operation <= 5)
                 return operation;
             else
-                Console.WriteLine("\nInvalid input, pls select a option from below(0 - 5).");
+                Console.WriteLine("\nInvalid input, pls select a option from below(0 - 5).\n");
         }
     }
 }
