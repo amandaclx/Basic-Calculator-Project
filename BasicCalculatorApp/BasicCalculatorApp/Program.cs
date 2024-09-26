@@ -31,7 +31,12 @@ class Program
             int operation = GetOperationSelectionFromUser();
 
             if (operation == 0)         //exit program
+            {
+                Console.WriteLine("\nExiting the Calculator Application...");
+                continueCalculation = false; //end operation
                 Environment.Exit(0);
+            }
+                
 
             Console.Write("\nPlease enter first number: ");
             double number1 = GetNumberFromUser();
@@ -116,7 +121,7 @@ class Program
                 userResponse = Console.ReadLine().Trim().ToLower();
 
                 if (userResponse != "y" && userResponse != "n")
-                    Console.WriteLine("\nInvalid input. Please enter either (y/n).");
+                    Console.WriteLine("\nInvalid input. Please enter either (y/n). \n");
 
             } while (userResponse != "y" && userResponse != "n");
 
@@ -124,7 +129,7 @@ class Program
         }
 
         //show history of calculations performed
-        Console.WriteLine("\nRecords of Calculation Hisotry");
+        Console.WriteLine("\nRecords of Calculation History");
         foreach (var value in historyrecords)
         {
             Console.WriteLine(value);
