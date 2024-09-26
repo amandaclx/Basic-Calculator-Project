@@ -26,9 +26,14 @@
 • Dislay a history feature that records previous calculations (Included at the end of the application)
 </p>
 
+
 <h3>Instructions to run the code:</h3>
 
 <p>1. Download the files in this package<br>
    2. Run the cs file<br>
    For me, I used Visual Studio to write the codes and run the project when I am done with the implementation<br>( but any plaform should be fine as long as it is supported)
 </p>
+
+<h3>
+   **The documentation of the calculation application and test cases are attached under the pdf file.**
+</h3>
